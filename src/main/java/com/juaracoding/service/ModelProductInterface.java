@@ -8,6 +8,7 @@ public interface ModelProductInterface {
 
 	public List<Product> getAllProduct();
 	public String addProduct(Product product);
+	public List<Product> getProductByName(String name);
 //	public String updateProduct(Product product);
 //	public Product getByIdProduct(String id);
 //	public String deleteProduct(String id);

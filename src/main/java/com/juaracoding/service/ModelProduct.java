@@ -27,4 +27,10 @@ public class ModelProduct implements ModelProductInterface{
 		return "Berhasil menambahkan product";
 	}
 
+	@Override
+	public List<Product> getProductByName(String name) {
+		// TODO Auto-generated method stub
+		return this.prodRepo.findProductByName(name);
+	}
+
 }

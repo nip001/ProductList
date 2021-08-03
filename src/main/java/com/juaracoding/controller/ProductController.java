@@ -60,5 +60,10 @@ public class ProductController {
 		
 	}
 	
+	@GetMapping("/{name}")
+	public List<Product> getProductByName(@PathVariable String name){
+		return this.modProduct.getProductByName(name);
+	}
+	
 	
 }
