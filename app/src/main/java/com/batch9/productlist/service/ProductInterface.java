@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
@@ -21,5 +22,5 @@ public interface ProductInterface {
 
     @Multipart
     @POST("/product/add")
-    Call<String> addProduct(@Part("file") RequestBody images, @Part("data") String data);
+    Call<String> addProduct(@Part MultipartBody.Part file, @Part("data") RequestBody data);
 }

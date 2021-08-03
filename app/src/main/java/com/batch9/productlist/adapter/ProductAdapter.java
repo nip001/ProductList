@@ -37,7 +37,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
-        Glide.with(context).load(dataProduct.get(position).getProductImage()).into(holder.imageView);
+        Glide.with(context).load("http://192.168.0.109:8080/product/image/"+dataProduct.get(position).getProductImage()).into(holder.imageView);
         holder.proDesc.setText("Product Desc : "+ dataProduct.get(position).getProductDescription());
         holder.proVarian.setText("Product Varian : "+dataProduct.get(position).getProductVarian());
         holder.proName.setText(dataProduct.get(position).getProductName());
