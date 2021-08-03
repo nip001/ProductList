@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ProductList"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Search"
+            android:exported="true" />
+        <activity
             android:name=".Tambah"
             android:exported="true" />
         <activity

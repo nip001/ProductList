@@ -14,11 +14,16 @@ import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
+import retrofit2.http.Path;
 
 public interface ProductInterface {
 
     @GET("/product/")
     Call<ArrayList<Product>> getAll();
+
+    @GET("/product/{name}")
+    Call<ArrayList<Product>> getAllByName(@Path("name") String name);
+
 
     @Multipart
     @POST("/product/add")

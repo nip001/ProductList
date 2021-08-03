@@ -106,8 +106,8 @@ public class Tambah extends AppCompatActivity {
         call.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                Toast toast = Toast.makeText(getApplicationContext(), response.body().toString(), Toast.LENGTH_SHORT);
-                toast.show();
+                
+                finish();
             }
 
             @Override
